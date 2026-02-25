@@ -1,6 +1,6 @@
 <div>
   {% if user.is_authenticated%}
-    <p>Driver: <a href="{% url 'taxi:driver-detail' pk=1 %}">{{user.username}}</a></p>
+    <p>Driver: <a href="{% url 'taxi:driver-detail' pk=user.pk %}">{{user.username}}</a></p>
 
     <form action="{% url 'logout' %}" method="post">
       {% csrf_token %}
