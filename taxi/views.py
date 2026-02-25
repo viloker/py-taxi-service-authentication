@@ -7,8 +7,8 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
-
 from .models import Driver, Car, Manufacturer
+
 
 @login_required
 def index(request: HttpRequest) -> HttpResponse:
